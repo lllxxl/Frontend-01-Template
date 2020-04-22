@@ -4,33 +4,21 @@
 1. 非形式语言：人类语言(英语、汉语等)
 2. 形式语言：乔姆斯基谱系
 
- 2.1 0型 无限制文法
- ```javascript
- 	<a><b> ::= <c><d> 
- ````
- 	等号左边可以有多个生成项  
- 	javaScript中的get就属于无限制文法
- 	{
- 		get a {return 1}
- 		get:1
- 	}
+ 2.1 0型 无限制文法 <a><b> ::= <c><d> 
 
- 2.2 1型 上下文相关文法
- ```javascript
- 	"a" <b> "c" ::= "a" "x" "c" 
- ````
+ 	等号左边可以有多个生成项  
+
+ 	javaScript中的get就属于无限制文法
+
+ 2.2 1型 上下文相关文法 "a" <b> "c" ::= "a" "x" "c" 
+
  	上下文"a"和"c"不变，中间的b可以变
 
- 2.3 2型 上下文无关文法
- 	```javascript
- 	<a> ::= "xxx" 
- 	```
+ 2.3 2型 上下文无关文法 <a> ::= "xxx" 
 
- 2.4 3型 正则  
- ```javascript
- 	<a> ::= <a>? 
-````
- 	只允许左递归
+ 2.4 3型 正则 <a> ::= <a>? 
+
+ 	只允许左递归  
  	javaScript表达式在 ** 出现之前是3型的，出现之后就成了2型的
 
 从0型到3型，限制和严格性逐渐增强。  大多数编程语言都是2型文法为主体的，偶尔会出现某些特例。  
@@ -86,7 +74,7 @@
 ### 编程语言的粒度划分
 Atom-Expression-Statement-Structure-Program
 
-##javaScript词法及类型
+##  javaScript词法及类型
 ### Unicode
 最早的字符集：ASCII，所有字符集都支持ASCII，兼容性最好  
 四位16进制unicode范围内的字符称为BMP，js中charCode系列API只能处理BMP范围内的字符，超出该范围需要用fromCodePoint和codePointAt系列  
@@ -125,7 +113,7 @@ parseInt(09)在浏览器中的运行结果可能不是9，因为有时0开头的
 Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON
 ````
 
-97.toString(2)为什么会报错？因为会当成小数点解析
+97.toString(2)为什么会报错？因为会当成小数点解析  
 97 .toString(2)是合法输入
 
 - String
